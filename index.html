@@ -4,16 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>火水絵本｜心体調整塾 たけちゃん</title>
-<meta name="description" content="火水性質分析の基本編を、大きな絵と短い文の絵本に組み直しました。ネットで最後まで無料で読めます。">
+<meta name="description" content="火水の絵本が2冊。物語絵本『ひーくんと みーちゃん』と、火水性質分析の絵本テキストが、最後まで無料で読めます。">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="火水絵本">
 <meta property="og:title" content="火水絵本｜心体調整塾 たけちゃん">
-<meta property="og:description" content="火水性質分析の基本編を、大きな絵と短い文の絵本に組み直しました。ネットで最後まで無料で読めます。">
+<meta property="og:description" content="火水の絵本が2冊。物語絵本『ひーくんと みーちゃん』と、火水性質分析の絵本テキストが、最後まで無料で読めます。">
 <meta property="og:url" content="https://kasuiehon.pages.dev/">
 <meta property="og:image" content="https://kasuiehon.pages.dev/ogp.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="火水絵本｜心体調整塾 たけちゃん">
-<meta name="twitter:description" content="火水性質分析の基本編を、大きな絵と短い文の絵本に組み直しました。ネットで最後まで無料で読めます。">
+<meta name="twitter:description" content="火水の絵本が2冊。物語絵本『ひーくんと みーちゃん』と、火水性質分析の絵本テキストが、最後まで無料で読めます。">
 <meta name="twitter:image" content="https://kasuiehon.pages.dev/ogp.png">
 <meta name="theme-color" content="#ffffff">
 <link rel="icon" href="favicon.ico">
@@ -43,11 +43,12 @@
   .nav { display:flex; align-items:center; justify-content:space-between; margin: 12px 2px 4px; }
   .nav button { border:none; cursor:pointer; padding: 11px 20px; border-radius: 999px; background:#ff7a59; color:#fff; font-family:inherit; font-weight:900; font-size: 15px; }
   .nav button:disabled { background:#ddd; color:#aaa; cursor:default; }
-  #counter { font-size: 14px; color:#999; font-weight:700; }
-  h2 { font-size: 20px; font-weight: 900; margin: 34px 0 8px; text-align:center; }
+  .counter { font-size: 14px; color:#999; font-weight:700; }
+  h2 { font-size: 20px; font-weight: 900; margin: 40px 0 8px; text-align:center; }
   h2 .hi { color:#ff7a59; } h2 .mizu { color:#4a90d9; }
   .about { line-height: 1.9; font-size: 15px; color:#555; }
   .about b { color:#2b2b2b; }
+  .booklead { line-height: 1.9; font-size: 15px; color:#555; text-align:center; margin: 0 0 14px; }
   .tokuten { background:#fffafa; border: 2px solid #ffd9cf; border-radius: 20px; padding: 18px 20px; margin: 14px 0; }
   .tokuten li { line-height: 1.9; font-size: 15px; color:#555; }
   .links { margin-top: 30px; text-align:center; }
@@ -60,16 +61,83 @@
   <header>
     <h1><span class="hi">火</span><span class="mizu">水</span>絵本</h1>
     <p class="subtitle">心体調整塾 たけちゃん</p>
-    <p class="lead">火水性質分析の基本編を、<b>大きな絵と短い文の絵本</b>に組み直しました。<br>内容は、無料で公開している「中心の記事」と同じです。ちがうのは、形です。<br>このページで、最後まで無料で読めます。</p>
+    <p class="lead">火水の絵本が、<b>2冊</b>あります。<br>物語絵本『ひーくんと みーちゃん』と、火水性質分析の基本編を絵本に組み直した理論絵本。<br>どちらも、このページで<b>最後まで無料</b>で読めます。</p>
     <img class="cover" src="hero.png" alt="絵本を読む火と水のキャラクター">
     <div class="cta">
-      <a class="btn" href="#read">はじめから読む</a>
-      <a class="btn blue" href="ehon-v1.pdf" download>PDFで読む</a>
+      <a class="btn" href="#story">物語絵本を読む</a>
+      <a class="btn blue" href="#theory">理論絵本を読む</a>
     </div>
-    <p class="note">全26ページ（試作 v1）・横にスライドして読めます</p>
+    <p class="note">横にスライドして読めます</p>
   </header>
 
-  <main id="read">
+  <main>
+  <section id="story">
+    <h2>物語絵本『ひーくんと みーちゃん』</h2>
+    <p class="booklead">言葉がとくいな火の子と、感じすぎて言葉が出ない水の子。<br>ふたりが理解し合い、恐れが溶けて、安心が戻るまでのおはなしです。<br>子どもにも、大人にも。全49ページ。</p>
+    <div class="slider" id="slider-story">
+    <div class="slide"><img src="story/page-01.jpg" alt="物語 1ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-02.jpg" alt="物語 2ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-03.jpg" alt="物語 3ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-04.jpg" alt="物語 4ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-05.jpg" alt="物語 5ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-06.jpg" alt="物語 6ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-07.jpg" alt="物語 7ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-08.jpg" alt="物語 8ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-09.jpg" alt="物語 9ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-10.jpg" alt="物語 10ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-11.jpg" alt="物語 11ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-12.jpg" alt="物語 12ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-13.jpg" alt="物語 13ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-14.jpg" alt="物語 14ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-15.jpg" alt="物語 15ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-16.jpg" alt="物語 16ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-17.jpg" alt="物語 17ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-18.jpg" alt="物語 18ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-19.jpg" alt="物語 19ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-20.jpg" alt="物語 20ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-21.jpg" alt="物語 21ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-22.jpg" alt="物語 22ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-23.jpg" alt="物語 23ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-24.jpg" alt="物語 24ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-25.jpg" alt="物語 25ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-26.jpg" alt="物語 26ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-27.jpg" alt="物語 27ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-28.jpg" alt="物語 28ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-29.jpg" alt="物語 29ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-30.jpg" alt="物語 30ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-31.jpg" alt="物語 31ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-32.jpg" alt="物語 32ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-33.jpg" alt="物語 33ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-34.jpg" alt="物語 34ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-35.jpg" alt="物語 35ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-36.jpg" alt="物語 36ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-37.jpg" alt="物語 37ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-38.jpg" alt="物語 38ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-39.jpg" alt="物語 39ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-40.jpg" alt="物語 40ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-41.jpg" alt="物語 41ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-42.jpg" alt="物語 42ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-43.jpg" alt="物語 43ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-44.jpg" alt="物語 44ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-45.jpg" alt="物語 45ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-46.jpg" alt="物語 46ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-47.jpg" alt="物語 47ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-48.jpg" alt="物語 48ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-49.jpg" alt="物語 49ページ目" loading="lazy"></div>
+    </div>
+    <div class="nav">
+      <button id="prev-story" type="button">◀ 前へ</button>
+      <span class="counter" id="counter-story">1 / 49</span>
+      <button id="next-story" type="button">次へ ▶</button>
+    </div>
+    <div class="cta">
+      <a class="btn blue" href="story-ehon-v1.pdf" download>物語絵本をPDFで読む</a>
+    </div>
+  </section>
+
+  <section id="theory">
+    <h2>理論絵本（基本編）</h2>
+    <p class="booklead">火水性質分析の基本編を、大きな絵と短い文の絵本に組み直しました。<br>内容は、無料で公開している「中心の記事」と同じです。ちがうのは、形です。全26ページ。</p>
     <div class="slider" id="slider">
     <div class="slide"><img src="pages/page-01.png" alt="1ページ目" loading="lazy"></div>
     <div class="slide"><img src="pages/page-02.png" alt="2ページ目" loading="lazy"></div>
@@ -100,9 +168,13 @@
     </div>
     <div class="nav">
       <button id="prev" type="button">◀ 前へ</button>
-      <span id="counter">1 / 26</span>
+      <span class="counter" id="counter">1 / 26</span>
       <button id="next" type="button">次へ ▶</button>
     </div>
+    <div class="cta">
+      <a class="btn blue" href="ehon-v1.pdf" download>理論絵本をPDFで読む</a>
+    </div>
+  </section>
   </main>
 
   <section>
@@ -133,22 +205,25 @@
 </div>
 
 <script>
-  const slider = document.getElementById('slider');
-  const counter = document.getElementById('counter');
-  const prev = document.getElementById('prev');
-  const next = document.getElementById('next');
-  const total = 26;
-  function current() { return Math.round(slider.scrollLeft / slider.clientWidth) + 1; }
-  function update() {
-    const n = Math.min(Math.max(current(), 1), total);
-    counter.textContent = n + ' / ' + total;
-    prev.disabled = n <= 1;
-    next.disabled = n >= total;
+  function setupSlider(sliderId, counterId, prevId, nextId, total) {
+    const slider = document.getElementById(sliderId);
+    const counter = document.getElementById(counterId);
+    const prev = document.getElementById(prevId);
+    const next = document.getElementById(nextId);
+    function current() { return Math.round(slider.scrollLeft / slider.clientWidth) + 1; }
+    function update() {
+      const n = Math.min(Math.max(current(), 1), total);
+      counter.textContent = n + ' / ' + total;
+      prev.disabled = n <= 1;
+      next.disabled = n >= total;
+    }
+    slider.addEventListener('scroll', () => requestAnimationFrame(update), { passive: true });
+    prev.addEventListener('click', () => slider.scrollBy({ left: -slider.clientWidth, behavior: 'smooth' }));
+    next.addEventListener('click', () => slider.scrollBy({ left: slider.clientWidth, behavior: 'smooth' }));
+    update();
   }
-  slider.addEventListener('scroll', () => requestAnimationFrame(update), { passive: true });
-  prev.addEventListener('click', () => slider.scrollBy({ left: -slider.clientWidth, behavior: 'smooth' }));
-  next.addEventListener('click', () => slider.scrollBy({ left: slider.clientWidth, behavior: 'smooth' }));
-  update();
+  setupSlider('slider-story', 'counter-story', 'prev-story', 'next-story', 49);
+  setupSlider('slider', 'counter', 'prev', 'next', 26);
 </script>
 </body>
 </html>
