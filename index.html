@@ -34,8 +34,14 @@
   a.btn.blue { background:#4a90d9; }
   a.btn.grey { background:#8a8a8a; }
   .note { text-align:center; font-size: 13px; color:#999; font-weight:700; margin: 4px 0 20px; }
-  .pages img { width: 100%; display:block; margin: 0 auto 12px; border-radius: 12px; box-shadow: 0 3px 12px rgba(0,0,0,.06); }
-  .pageno { text-align:center; font-size: 13px; color:#999; font-weight:700; margin: -4px 0 20px; }
+  .slider { display:flex; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; scrollbar-width:none; border-radius: 12px; }
+  .slider::-webkit-scrollbar { display:none; }
+  .slide { flex:0 0 100%; scroll-snap-align:start; scroll-snap-stop:always; }
+  .slide img { width: 100%; display:block; border-radius: 12px; box-shadow: 0 3px 12px rgba(0,0,0,.06); }
+  .nav { display:flex; align-items:center; justify-content:space-between; margin: 12px 2px 4px; }
+  .nav button { border:none; cursor:pointer; padding: 11px 20px; border-radius: 999px; background:#ff7a59; color:#fff; font-family:inherit; font-weight:900; font-size: 15px; }
+  .nav button:disabled { background:#ddd; color:#aaa; cursor:default; }
+  #counter { font-size: 14px; color:#999; font-weight:700; }
   h2 { font-size: 20px; font-weight: 900; margin: 34px 0 8px; text-align:center; }
   h2 .hi { color:#ff7a59; } h2 .mizu { color:#4a90d9; }
   .about { line-height: 1.9; font-size: 15px; color:#555; }
@@ -58,36 +64,43 @@
       <a class="btn" href="#read">はじめから読む</a>
       <a class="btn blue" href="ehon-v1.pdf" download>PDFで読む</a>
     </div>
-    <p class="note">全26ページ（試作 v1）・スクロールして読めます</p>
+    <p class="note">全26ページ（試作 v1）・横にスライドして読めます</p>
   </header>
 
-  <main class="pages" id="read">
-    <img src="pages/page-01.png" alt="1ページ目" loading="lazy"><p class="pageno">1 / 26</p>
-    <img src="pages/page-02.png" alt="2ページ目" loading="lazy"><p class="pageno">2 / 26</p>
-    <img src="pages/page-03.png" alt="3ページ目" loading="lazy"><p class="pageno">3 / 26</p>
-    <img src="pages/page-04.png" alt="4ページ目" loading="lazy"><p class="pageno">4 / 26</p>
-    <img src="pages/page-05.png" alt="5ページ目" loading="lazy"><p class="pageno">5 / 26</p>
-    <img src="pages/page-06.png" alt="6ページ目" loading="lazy"><p class="pageno">6 / 26</p>
-    <img src="pages/page-07.png" alt="7ページ目" loading="lazy"><p class="pageno">7 / 26</p>
-    <img src="pages/page-08.png" alt="8ページ目" loading="lazy"><p class="pageno">8 / 26</p>
-    <img src="pages/page-09.png" alt="9ページ目" loading="lazy"><p class="pageno">9 / 26</p>
-    <img src="pages/page-10.png" alt="10ページ目" loading="lazy"><p class="pageno">10 / 26</p>
-    <img src="pages/page-11.png" alt="11ページ目" loading="lazy"><p class="pageno">11 / 26</p>
-    <img src="pages/page-12.png" alt="12ページ目" loading="lazy"><p class="pageno">12 / 26</p>
-    <img src="pages/page-13.png" alt="13ページ目" loading="lazy"><p class="pageno">13 / 26</p>
-    <img src="pages/page-14.png" alt="14ページ目" loading="lazy"><p class="pageno">14 / 26</p>
-    <img src="pages/page-15.png" alt="15ページ目" loading="lazy"><p class="pageno">15 / 26</p>
-    <img src="pages/page-16.png" alt="16ページ目" loading="lazy"><p class="pageno">16 / 26</p>
-    <img src="pages/page-17.png" alt="17ページ目" loading="lazy"><p class="pageno">17 / 26</p>
-    <img src="pages/page-18.png" alt="18ページ目" loading="lazy"><p class="pageno">18 / 26</p>
-    <img src="pages/page-19.png" alt="19ページ目" loading="lazy"><p class="pageno">19 / 26</p>
-    <img src="pages/page-20.png" alt="20ページ目" loading="lazy"><p class="pageno">20 / 26</p>
-    <img src="pages/page-21.png" alt="21ページ目" loading="lazy"><p class="pageno">21 / 26</p>
-    <img src="pages/page-22.png" alt="22ページ目" loading="lazy"><p class="pageno">22 / 26</p>
-    <img src="pages/page-23.png" alt="23ページ目" loading="lazy"><p class="pageno">23 / 26</p>
-    <img src="pages/page-24.png" alt="24ページ目" loading="lazy"><p class="pageno">24 / 26</p>
-    <img src="pages/page-25.png" alt="25ページ目" loading="lazy"><p class="pageno">25 / 26</p>
-    <img src="pages/page-26.png" alt="26ページ目" loading="lazy"><p class="pageno">26 / 26</p>
+  <main id="read">
+    <div class="slider" id="slider">
+    <div class="slide"><img src="pages/page-01.png" alt="1ページ目" loading="lazy"></div>
+    <div class="slide"><img src="pages/page-02.png" alt="2ページ目" loading="lazy"></div>
+    <div class="slide"><img src="pages/page-03.png" alt="3ページ目" loading="lazy"></div>
+    <div class="slide"><img src="pages/page-04.png" alt="4ページ目" loading="lazy"></div>
+    <div class="slide"><img src="pages/page-05.png" alt="5ページ目" loading="lazy"></div>
+    <div class="slide"><img src="pages/page-06.png" alt="6ページ目" loading="lazy"></div>
+    <div class="slide"><img src="pages/page-07.png" alt="7ページ目" loading="lazy"></div>
+    <div class="slide"><img src="pages/page-08.png" alt="8ページ目" loading="lazy"></div>
+    <div class="slide"><img src="pages/page-09.png" alt="9ページ目" loading="lazy"></div>
+    <div class="slide"><img src="pages/page-10.png" alt="10ページ目" loading="lazy"></div>
+    <div class="slide"><img src="pages/page-11.png" alt="11ページ目" loading="lazy"></div>
+    <div class="slide"><img src="pages/page-12.png" alt="12ページ目" loading="lazy"></div>
+    <div class="slide"><img src="pages/page-13.png" alt="13ページ目" loading="lazy"></div>
+    <div class="slide"><img src="pages/page-14.png" alt="14ページ目" loading="lazy"></div>
+    <div class="slide"><img src="pages/page-15.png" alt="15ページ目" loading="lazy"></div>
+    <div class="slide"><img src="pages/page-16.png" alt="16ページ目" loading="lazy"></div>
+    <div class="slide"><img src="pages/page-17.png" alt="17ページ目" loading="lazy"></div>
+    <div class="slide"><img src="pages/page-18.png" alt="18ページ目" loading="lazy"></div>
+    <div class="slide"><img src="pages/page-19.png" alt="19ページ目" loading="lazy"></div>
+    <div class="slide"><img src="pages/page-20.png" alt="20ページ目" loading="lazy"></div>
+    <div class="slide"><img src="pages/page-21.png" alt="21ページ目" loading="lazy"></div>
+    <div class="slide"><img src="pages/page-22.png" alt="22ページ目" loading="lazy"></div>
+    <div class="slide"><img src="pages/page-23.png" alt="23ページ目" loading="lazy"></div>
+    <div class="slide"><img src="pages/page-24.png" alt="24ページ目" loading="lazy"></div>
+    <div class="slide"><img src="pages/page-25.png" alt="25ページ目" loading="lazy"></div>
+    <div class="slide"><img src="pages/page-26.png" alt="26ページ目" loading="lazy"></div>
+    </div>
+    <div class="nav">
+      <button id="prev" type="button">◀ 前へ</button>
+      <span id="counter">1 / 26</span>
+      <button id="next" type="button">次へ ▶</button>
+    </div>
   </main>
 
   <section>
@@ -116,5 +129,24 @@
 
   <footer>心体調整塾 たけちゃん</footer>
 </div>
+
+<script>
+  const slider = document.getElementById('slider');
+  const counter = document.getElementById('counter');
+  const prev = document.getElementById('prev');
+  const next = document.getElementById('next');
+  const total = 26;
+  function current() { return Math.round(slider.scrollLeft / slider.clientWidth) + 1; }
+  function update() {
+    const n = Math.min(Math.max(current(), 1), total);
+    counter.textContent = n + ' / ' + total;
+    prev.disabled = n <= 1;
+    next.disabled = n >= total;
+  }
+  slider.addEventListener('scroll', () => requestAnimationFrame(update), { passive: true });
+  prev.addEventListener('click', () => slider.scrollBy({ left: -slider.clientWidth, behavior: 'smooth' }));
+  next.addEventListener('click', () => slider.scrollBy({ left: slider.clientWidth, behavior: 'smooth' }));
+  update();
+</script>
 </body>
 </html>
