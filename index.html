@@ -82,7 +82,7 @@
   <section id="story">
     <h2>物語絵本『ひーくんと みーちゃん』</h2>
     <p style="font-size:20px;font-weight:700;color:#E85D2A;margin:2px 0 10px;">言葉がとくいな子と、感じすぎる子の物語</p>
-    <p class="booklead">言葉がとくいな火の子と、感じすぎて言葉が出ない水の子。<br>ふたりが理解し合い、恐れが溶けて、安心が戻るまでのおはなしです。<br>子どもにも、大人にも。全49ページ。</p>
+    <p class="booklead">言葉がとくいな火の子と、感じすぎて言葉が出ない水の子。<br>ふたりが理解し合い、恐れが溶けて、安心が戻るまでのおはなしです。<br>子どもにも、大人にも。全56ページ。</p>
     <div class="reader" id="reader-story">
     <div class="slider" id="slider-story">
     <div class="slide"><img src="story/page-01.jpg" alt="物語 1ページ目" loading="lazy"></div>
@@ -134,16 +134,23 @@
     <div class="slide"><img src="story/page-47.jpg" alt="物語 47ページ目" loading="lazy"></div>
     <div class="slide"><img src="story/page-48.jpg" alt="物語 48ページ目" loading="lazy"></div>
     <div class="slide"><img src="story/page-49.jpg" alt="物語 49ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-50.jpg" alt="物語 50ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-51.jpg" alt="物語 51ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-52.jpg" alt="物語 52ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-53.jpg" alt="物語 53ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-54.jpg" alt="物語 54ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-55.jpg" alt="物語 55ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-56.jpg" alt="物語 56ページ目" loading="lazy"></div>
     </div>
     <div class="nav">
       <button id="prev-story" type="button">◀ 前へ</button>
-      <span class="counter" id="counter-story">1 / 49</span>
+      <span class="counter" id="counter-story">1 / 56</span>
       <button id="next-story" type="button">次へ ▶</button>
     </div>
     </div>
     <div class="cta"><button class="fsbtn" id="fs-story" type="button">全画面で読む（横画面がおすすめ）</button></div>
     <div class="cta">
-      <a class="btn blue" href="story-ehon-v1.pdf" download>物語絵本をPDFで読む</a>
+      <a class="btn blue" href="story-ehon-v2.pdf" download>物語絵本をPDFで読む</a>
     </div>
   </section>
 
@@ -251,7 +258,7 @@
     next.addEventListener('click', () => slider.scrollBy({ left: slider.clientWidth, behavior: 'smooth' }));
     update();
   }
-  setupSlider('slider-story', 'counter-story', 'prev-story', 'next-story', 49);
+  setupSlider('slider-story', 'counter-story', 'prev-story', 'next-story', 56);
   setupSlider('slider', 'counter', 'prev', 'next', 39);
   function setupFullscreen(btnId, readerId) {
     const btn = document.getElementById(btnId);
