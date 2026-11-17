@@ -16,6 +16,7 @@
 <meta name="twitter:description" content="火水の絵本が2冊。物語絵本『ひーくんと みーちゃん』と、火水性質分析の絵本テキストが、最後まで無料で読めます。">
 <meta name="twitter:image" content="https://kasuiehon.pages.dev/ogp.png">
 <meta name="theme-color" content="#ffffff">
+<script>if('scrollRestoration' in history)history.scrollRestoration='manual';</script>
 <link rel="icon" href="favicon.ico">
 <link rel="apple-touch-icon" href="icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,7 +31,7 @@
   .subtitle { font-size: 18px; font-weight: 700; color:#e2543e; margin: 0 0 6px; }
   .lead { line-height: 1.9; font-size: 15px; color:#555; margin: 6px 0 0; }
   .lead b { color:#2b2b2b; }
-  img.cover { width: 100%; max-width: 460px; display:block; margin: 14px auto 4px; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,.08); }
+  img.cover { width: 100%; max-width: 460px; aspect-ratio: 3 / 2; display:block; margin: 14px auto 4px; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,.08); }
   .cta { text-align:center; margin: 18px 0 6px; }
   a.btn { display:inline-block; margin: 5px; padding: 12px 22px; border-radius: 999px; background:#ff7a59; color:#fff; text-decoration:none; font-weight:900; font-size: 15px; }
   a.btn.blue { background:#4a90d9; }
@@ -39,7 +40,7 @@
   .slider { display:flex; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; scrollbar-width:none; border-radius: 12px; }
   .slider::-webkit-scrollbar { display:none; }
   .slide { flex:0 0 100%; scroll-snap-align:start; scroll-snap-stop:always; }
-  .slide img { width: 100%; display:block; border-radius: 12px; box-shadow: 0 3px 12px rgba(0,0,0,.06); }
+  .slide img { width: 100%; aspect-ratio: 1754 / 1240; display:block; border-radius: 12px; box-shadow: 0 3px 12px rgba(0,0,0,.06); }
   .nav { display:flex; align-items:center; justify-content:space-between; margin: 12px 2px 4px; }
   .nav button { border:none; cursor:pointer; padding: 11px 20px; border-radius: 999px; background:#ff7a59; color:#fff; font-family:inherit; font-weight:900; font-size: 15px; }
   .nav button:disabled { background:#ddd; color:#aaa; cursor:default; }
@@ -229,6 +230,7 @@
 </div>
 
 <script>
+  if (!location.hash) window.scrollTo(0, 0);
   function setupSlider(sliderId, counterId, prevId, nextId, total) {
     const slider = document.getElementById(sliderId);
     const counter = document.getElementById(counterId);
@@ -247,7 +249,7 @@
     update();
   }
   setupSlider('slider-story', 'counter-story', 'prev-story', 'next-story', 49);
-  setupSlider('slider', 'counter', 'prev', 'next', 40);
+  setupSlider('slider', 'counter', 'prev', 'next', 39);
   function setupFullscreen(btnId, readerId) {
     const btn = document.getElementById(btnId);
     const reader = document.getElementById(readerId);
