@@ -4,16 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>火水絵本｜心体調整塾 たけちゃん</title>
-<meta name="description" content="火水の絵本が2冊。物語絵本『ひーくんと みーちゃん』と、火水性質分析の絵本テキストが、最後まで無料で読めます。">
+<meta name="description" content="物語絵本『ひーくんと みーちゃん』が、開いてすぐ無料で読めます。読み終わった方へ、火水性質分析の理論絵本もご用意しています。">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="火水絵本">
 <meta property="og:title" content="火水絵本｜心体調整塾 たけちゃん">
-<meta property="og:description" content="火水の絵本が2冊。物語絵本『ひーくんと みーちゃん』と、火水性質分析の絵本テキストが、最後まで無料で読めます。">
+<meta property="og:description" content="物語絵本『ひーくんと みーちゃん』が、開いてすぐ無料で読めます。読み終わった方へ、火水性質分析の理論絵本もご用意しています。">
 <meta property="og:url" content="https://kasuiehon.pages.dev/">
 <meta property="og:image" content="https://kasuiehon.pages.dev/ogp.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="火水絵本｜心体調整塾 たけちゃん">
-<meta name="twitter:description" content="火水の絵本が2冊。物語絵本『ひーくんと みーちゃん』と、火水性質分析の絵本テキストが、最後まで無料で読めます。">
+<meta name="twitter:description" content="物語絵本『ひーくんと みーちゃん』が、開いてすぐ無料で読めます。読み終わった方へ、火水性質分析の理論絵本もご用意しています。">
 <meta name="twitter:image" content="https://kasuiehon.pages.dev/ogp.png">
 <meta name="theme-color" content="#ffffff">
 <script>if('scrollRestoration' in history)history.scrollRestoration='manual';</script>
@@ -25,32 +25,30 @@
   * { box-sizing: border-box; }
   body { font-family: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", sans-serif; background:#fff; color:#2b2b2b; margin:0; padding:0 16px 48px; }
   .wrap { max-width: 680px; margin: 0 auto; }
-  header { text-align:center; padding: 28px 0 4px; }
-  h1 { font-size: 32px; font-weight: 900; margin: 10px 0 2px; }
-  h1 .hi { color:#ff7a59; } h1 .mizu { color:#4a90d9; }
-  .subtitle { font-size: 18px; font-weight: 700; color:#e2543e; margin: 0 0 6px; }
-  .lead { line-height: 1.9; font-size: 15px; color:#555; margin: 6px 0 0; }
-  .lead b { color:#2b2b2b; }
-  img.cover { width: 100%; max-width: 460px; aspect-ratio: 3 / 2; display:block; margin: 14px auto 4px; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,.08); }
-  .cta { text-align:center; margin: 18px 0 6px; }
-  a.btn { display:inline-block; margin: 5px; padding: 12px 22px; border-radius: 999px; background:#ff7a59; color:#fff; text-decoration:none; font-weight:900; font-size: 15px; }
-  a.btn.blue { background:#4a90d9; }
-  a.btn.grey { background:#ff8fab; }
-  a.btn.line { background:#8bc34a; }
-  .note { text-align:center; font-size: 13px; color:#999; font-weight:700; margin: 4px 0 20px; }
+  .booktitle { text-align:center; font-size: 17px; font-weight: 900; margin: 12px 0 10px; }
+  .booktitle .hi { color:#ff7a59; } .booktitle .mizu { color:#4a90d9; }
   .slider { display:flex; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; scrollbar-width:none; border-radius: 12px; }
   .slider::-webkit-scrollbar { display:none; }
   .slide { flex:0 0 100%; scroll-snap-align:start; scroll-snap-stop:always; }
-  .slide img { width: 100%; aspect-ratio: 1754 / 1240; display:block; border-radius: 12px; box-shadow: 0 3px 12px rgba(0,0,0,.06); }
+  .slide img { width: 100%; aspect-ratio: 1754 / 1240; display:block; border-radius: 12px; box-shadow: 0 3px 12px rgba(0,0,0,.06); cursor:pointer; }
   .nav { display:flex; align-items:center; justify-content:space-between; margin: 12px 2px 4px; }
   .nav button { border:none; cursor:pointer; padding: 11px 20px; border-radius: 999px; background:#ff7a59; color:#fff; font-family:inherit; font-weight:900; font-size: 15px; }
   .nav button:disabled { background:#ddd; color:#aaa; cursor:default; }
+  .nav button.prevbtn { background:#f3f3f3; color:#999; }
+  .nav button.nextbig { font-size: 18px; padding: 15px 30px; }
+  .nav button.nextbig.endmode { background:#4a90d9; font-size: 16px; }
   .counter { font-size: 14px; color:#999; font-weight:700; }
-  .fsbtn { display:inline-block; border:none; cursor:pointer; margin: 5px; padding: 12px 22px; border-radius: 999px; background:#ff8fab; color:#fff; font-family:inherit; font-weight:900; font-size: 15px; }
+  .fslink { display:block; margin: 8px auto 0; background:none; border:none; color:#bbb; font-size: 13px; font-weight:700; text-decoration:underline; cursor:pointer; font-family:inherit; }
   .reader:fullscreen { background:#fff; display:flex; flex-direction:column; padding: 8px; }
   .reader:fullscreen .slider { flex:1; min-height:0; }
   .reader:fullscreen .slide { height:100%; }
   .reader:fullscreen .slide img { width:100%; height:100%; object-fit:contain; box-shadow:none; }
+  a.btn { display:inline-block; margin: 5px; padding: 12px 22px; border-radius: 999px; background:#ff7a59; color:#fff; text-decoration:none; font-weight:900; font-size: 15px; }
+  a.btn.blue { background:#4a90d9; }
+  a.btn.grey { background:#ff8fab; }
+  a.btn.line { background:#8bc34a; }
+  button.btnlike { display:inline-block; margin: 5px; padding: 14px 30px; border:none; cursor:pointer; border-radius: 999px; background:#4a90d9; color:#fff; font-family:inherit; font-weight:900; font-size: 17px; }
+  .cta { text-align:center; margin: 18px 0 6px; }
   h2 { font-size: 20px; font-weight: 900; margin: 40px 0 8px; text-align:center; }
   h2 .hi { color:#ff7a59; } h2 .mizu { color:#4a90d9; }
   .about { line-height: 1.9; font-size: 15px; color:#555; }
@@ -71,26 +69,12 @@
 </head>
 <body>
 <div class="wrap">
-  <header>
-    <h1><span class="hi">火</span><span class="mizu">水</span>絵本</h1>
-    <p class="subtitle">心体調整塾 たけちゃん</p>
-    <p class="lead">火水の絵本が、<b>2冊</b>あります。<br>物語絵本『ひーくんと みーちゃん』と、火水性質分析の基本編を絵本に組み直した理論絵本。<br>どちらも、このページで<b>最後まで無料</b>で読めます。</p>
-    <img class="cover" src="hero.png" alt="絵本を読む火と水のキャラクター">
-    <div class="cta">
-      <a class="btn" href="#story">物語絵本を読む</a>
-      <a class="btn blue" href="#theory">理論絵本を読む</a>
-    </div>
-    <p class="note">横にスライドして読めます</p>
-  </header>
 
-  <main>
   <section id="story">
-    <h2>物語絵本『ひーくんと みーちゃん』</h2>
-    <p style="font-size:20px;font-weight:700;color:#E85D2A;margin:2px 0 10px;">言葉がとくいな子と、感じすぎる子の物語</p>
-    <p class="booklead">言葉がとくいな火の子と、感じすぎて言葉が出ない水の子。<br>ふたりが理解し合い、恐れが溶けて、安心が戻るまでのおはなしです。<br>子どもにも、大人にも。全56ページ。</p>
+    <p class="booktitle"><span class="hi">火</span><span class="mizu">水</span>絵本『ひーくんと みーちゃん』</p>
     <div class="reader" id="reader-story">
     <div class="slider" id="slider-story">
-    <div class="slide"><img src="story/page-01.jpg" alt="物語 1ページ目" loading="lazy"></div>
+    <div class="slide"><img src="story/page-01.jpg" alt="物語 1ページ目"></div>
     <div class="slide"><img src="story/page-02.jpg" alt="物語 2ページ目" loading="lazy"></div>
     <div class="slide"><img src="story/page-03.jpg" alt="物語 3ページ目" loading="lazy"></div>
     <div class="slide"><img src="story/page-04.jpg" alt="物語 4ページ目" loading="lazy"></div>
@@ -148,12 +132,19 @@
     <div class="slide"><img src="story/page-56.jpg" alt="物語 56ページ目" loading="lazy"></div>
     </div>
     <div class="nav">
-      <button id="prev-story" type="button">◀ 前へ</button>
+      <button class="prevbtn" id="prev-story" type="button">◀ 前へ</button>
       <span class="counter" id="counter-story">1 / 56</span>
-      <button id="next-story" type="button">次へ ▶</button>
+      <button class="nextbig" id="next-story" type="button">次へ ▶</button>
     </div>
     </div>
-    <div class="cta"><button class="fsbtn" id="fs-story" type="button">全画面で読む（横画面がおすすめ）</button></div>
+    <button class="fslink" id="fs-story" type="button">全画面で読む（横画面がおすすめ）</button>
+  </section>
+
+  <main>
+  <section id="after">
+    <h2>読み終わった方へ</h2>
+    <p class="booklead">言葉がとくいな火の子と、感じすぎて言葉が出ない水の子。<br>ふたりが理解し合い、恐れが溶けて、安心が戻るまでのおはなしでした。</p>
+    <p class="about">この物語の背景にあるのが、<b>火水性質分析</b>です。ひーくんとみーちゃんのすれ違いも、仲直りも、すべて火と水の性質のちがいから生まれていました。「なぜ、そうなるの？」をくわしく知りたい方のために、基本編を大きな絵と短い文の絵本に組み直した<b>理論絵本</b>もご用意しています。</p>
     <div class="cta">
       <a class="btn blue" href="story-ehon-v2.pdf" download>物語絵本をPDFで読む</a>
     </div>
@@ -162,6 +153,10 @@
   <section id="theory">
     <h2>理論絵本（基本編）</h2>
     <p class="booklead">火水性質分析の基本編を、大きな絵と短い文の絵本に組み直しました。<br>内容は、無料で公開している「中心の記事」と同じです。ちがうのは、形です。全43ページ。</p>
+    <div class="cta" id="theory-cta">
+      <button class="btnlike" id="open-theory" type="button">理論絵本を読む ▼</button>
+    </div>
+    <div id="theory-reader" hidden>
     <div class="reader" id="reader">
     <div class="slider" id="slider">
     <div class="slide"><img src="pages/page-01.png" alt="1ページ目" loading="lazy"></div>
@@ -209,17 +204,28 @@
     <div class="slide"><img src="pages/page-43.png" alt="43ページ目" loading="lazy"></div>
     </div>
     <div class="nav">
-      <button id="prev" type="button">◀ 前へ</button>
+      <button class="prevbtn" id="prev" type="button">◀ 前へ</button>
       <span class="counter" id="counter">1 / 43</span>
       <button id="next" type="button">次へ ▶</button>
     </div>
     </div>
-    <div class="cta"><button class="fsbtn" id="fs" type="button">全画面で読む（横画面がおすすめ）</button></div>
+    <button class="fslink" id="fs" type="button">全画面で読む（横画面がおすすめ）</button>
     <div class="cta">
       <a class="btn blue" href="ehon-v21.pdf" download>理論絵本をPDFで読む</a>
     </div>
+    </div>
   </section>
   </main>
+
+  <section class="hisodate">
+    <img class="illust" src="hisodate-announce-v5.jpg" alt="水女子のための火育て塾🔥 みーちゃんのイラスト。自分のことを大事にしよう" loading="lazy">
+    <p class="core">他人ばかりを大事にしてしまう水女子のための、<br>自分を大事にする火育て塾🔥</p>
+    <p class="desc">感じているのに、言葉にできない。そのモヤモヤを言葉にするお手伝いをしています。感じたことを言葉にすることが、「自分を大事にする」ための手始めです。</p>
+    <p class="desc">無料相談・質問も受け付けています。</p>
+    <div class="cta">
+      <a class="btn" href="https://hisodate.pages.dev/">火育て塾のサイトを見る</a>
+    </div>
+  </section>
 
   <section>
     <h2>手元に置く版について</h2>
@@ -233,16 +239,6 @@
       </ul>
     </div>
     <p class="about">手元に置く版（印刷用PDF＋特典）のご案内は、準備ができ次第ここに載せます。価格は未定です。</p>
-  </section>
-
-  <section class="hisodate">
-    <img class="illust" src="hisodate-announce-v5.jpg" alt="水女子のための火育て塾🔥 みーちゃんのイラスト。自分のことを大事にしよう" loading="lazy">
-    <p class="core">他人ばかりを大事にしてしまう水女子のための、<br>自分を大事にする火育て塾🔥</p>
-    <p class="desc">感じているのに、言葉にできない。そのモヤモヤを言葉にするお手伝いをしています。感じたことを言葉にすることが、「自分を大事にする」ための手始めです。</p>
-    <p class="desc">無料相談・質問も受け付けています。</p>
-    <div class="cta">
-      <a class="btn" href="https://hisodate.pages.dev/">火育て塾のサイトを見る</a>
-    </div>
   </section>
 
   <section class="links">
@@ -260,29 +256,88 @@
 
 <script>
   if (!location.hash) window.scrollTo(0, 0);
-  function setupSlider(sliderId, counterId, prevId, nextId, total) {
-    const slider = document.getElementById(sliderId);
-    const counter = document.getElementById(counterId);
-    const prev = document.getElementById(prevId);
-    const next = document.getElementById(nextId);
-    function current() { return Math.round(slider.scrollLeft / slider.clientWidth) + 1; }
+
+  // ---- story reader: one big "next" button; on the last page it leads to the after-guide ----
+  (function () {
+    var slider = document.getElementById('slider-story');
+    var counter = document.getElementById('counter-story');
+    var prev = document.getElementById('prev-story');
+    var next = document.getElementById('next-story');
+    var total = 56;
+    function current() {
+      if (!slider.clientWidth) return 1;
+      return Math.min(Math.max(Math.round(slider.scrollLeft / slider.clientWidth) + 1, 1), total);
+    }
     function update() {
-      const n = Math.min(Math.max(current(), 1), total);
+      var n = current();
+      counter.textContent = n + ' / ' + total;
+      prev.disabled = n <= 1;
+      if (n >= total) { next.textContent = '読み終わった方へ ▼'; next.classList.add('endmode'); }
+      else { next.textContent = '次へ ▶'; next.classList.remove('endmode'); }
+    }
+    function goNext() {
+      if (current() >= total) {
+        document.getElementById('after').scrollIntoView({ behavior: 'smooth' });
+      } else {
+        slider.scrollBy({ left: slider.clientWidth, behavior: 'smooth' });
+      }
+    }
+    function goPrev() { slider.scrollBy({ left: -slider.clientWidth, behavior: 'smooth' }); }
+    slider.addEventListener('scroll', function () { requestAnimationFrame(update); }, { passive: true });
+    next.addEventListener('click', goNext);
+    prev.addEventListener('click', goPrev);
+    var downLeft = null;
+    slider.addEventListener('pointerdown', function () { downLeft = slider.scrollLeft; });
+    slider.addEventListener('click', function (e) {
+      if (downLeft !== null && Math.abs(slider.scrollLeft - downLeft) > 4) return;
+      var r = slider.getBoundingClientRect();
+      if (e.clientX - r.left > r.width * 0.4) goNext(); else goPrev();
+    });
+    update();
+  })();
+
+  // ---- theory reader: opened by the single button in the after-guide ----
+  var theoryUpdate = null;
+  (function () {
+    var slider = document.getElementById('slider');
+    var counter = document.getElementById('counter');
+    var prev = document.getElementById('prev');
+    var next = document.getElementById('next');
+    var total = 43;
+    function current() {
+      if (!slider.clientWidth) return 1;
+      return Math.min(Math.max(Math.round(slider.scrollLeft / slider.clientWidth) + 1, 1), total);
+    }
+    function update() {
+      var n = current();
       counter.textContent = n + ' / ' + total;
       prev.disabled = n <= 1;
       next.disabled = n >= total;
     }
-    slider.addEventListener('scroll', () => requestAnimationFrame(update), { passive: true });
-    prev.addEventListener('click', () => slider.scrollBy({ left: -slider.clientWidth, behavior: 'smooth' }));
-    next.addEventListener('click', () => slider.scrollBy({ left: slider.clientWidth, behavior: 'smooth' }));
+    theoryUpdate = update;
+    slider.addEventListener('scroll', function () { requestAnimationFrame(update); }, { passive: true });
+    prev.addEventListener('click', function () { slider.scrollBy({ left: -slider.clientWidth, behavior: 'smooth' }); });
+    next.addEventListener('click', function () { slider.scrollBy({ left: slider.clientWidth, behavior: 'smooth' }); });
     update();
+  })();
+
+  function openTheory(scroll) {
+    var box = document.getElementById('theory-reader');
+    var cta = document.getElementById('theory-cta');
+    if (box.hidden) {
+      box.hidden = false;
+      cta.style.display = 'none';
+      if (theoryUpdate) theoryUpdate();
+    }
+    if (scroll) box.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
-  setupSlider('slider-story', 'counter-story', 'prev-story', 'next-story', 56);
-  setupSlider('slider', 'counter', 'prev', 'next', 43);
+  document.getElementById('open-theory').addEventListener('click', function () { openTheory(true); });
+  if (location.hash === '#theory') openTheory(false);
+
   function setupFullscreen(btnId, readerId) {
-    const btn = document.getElementById(btnId);
-    const reader = document.getElementById(readerId);
-    btn.addEventListener('click', async () => {
+    var btn = document.getElementById(btnId);
+    var reader = document.getElementById(readerId);
+    btn.addEventListener('click', async function () {
       try {
         if (document.fullscreenElement) { document.exitFullscreen(); return; }
         await reader.requestFullscreen();
