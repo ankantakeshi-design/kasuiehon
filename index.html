@@ -383,7 +383,21 @@
     }
     function goNext() {
       if (current() >= total) {
-        document.getElementById('after').scrollIntoView({ behavior: 'smooth' });
+        var after = document.getElementById('after');
+        if (document.fullscreenElement) {
+          // In fullscreen only the reader is rendered, so scrolling to #after
+          // (outside the reader) does nothing. Exit fullscreen first, then scroll.
+          var onFsChange = function () {
+            if (!document.fullscreenElement) {
+              document.removeEventListener('fullscreenchange', onFsChange);
+              after.scrollIntoView({ behavior: 'smooth' });
+            }
+          };
+          document.addEventListener('fullscreenchange', onFsChange);
+          document.exitFullscreen();
+        } else {
+          after.scrollIntoView({ behavior: 'smooth' });
+        }
       } else {
         slider.scrollBy({ left: slider.clientWidth, behavior: 'smooth' });
       }
