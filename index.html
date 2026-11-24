@@ -81,6 +81,12 @@
 .faq-item summary::after{content:"＋";position:absolute;right:6px;top:15px;font-size:13px;color:#767676;font-weight:400;}
 .faq-item[open ] summary::after{content:"−";}
 .faq-a{padding:2px 4px 18px;font-size:15px;line-height:1.9;color:#2b2b2b;}
+.faq-outer{border:2px solid #e5e5e5;border-radius:14px;background:#fafafa;overflow:hidden;}
+.faq-outer>summary{cursor:pointer;list-style:none;min-height:56px;display:flex;align-items:center;justify-content:center;padding:12px 16px;font-size:17px;font-weight:800;color:#2b2b2b;}
+.faq-outer>summary::-webkit-details-marker{display:none;}
+.faq-outer>summary::after{content:"▽";margin-left:10px;font-size:14px;color:#767676;}
+.faq-outer[open ]>summary::after{content:"△";}
+.faq-inner{padding:2px 14px 14px;}
 </style>
 <script type="application/ld+json">
 {
@@ -349,14 +355,18 @@
   </section>
 
     <section class="faq-sec" aria-label="よくある質問">
-  <h2>よくある質問</h2>
+  <details class="faq-outer">
+  <summary>よくある質問</summary>
+  <div class="faq-inner">
   <details class="faq-item"><summary>『ひーくんと みーちゃん』は、どんな絵本ですか？</summary><div class="faq-a">言葉がとくいな火の子・ひーくんと、感じすぎて言葉が出ない水の子・みーちゃんの物語です。ふたりがすれ違いながらも理解し合い、恐れが溶けて、安心が戻るまでのおはなしです。全61ページを、このサイトで無料で読めます。ひーくんは、作者たけちゃんの昔の姿です。</div></details>
   <details class="faq-item"><summary>無料で読めますか？</summary><div class="faq-a">読めます。物語絵本も、理論絵本（基本編）も、このサイトで無料で公開しています。ページをめくる形で、そのまま読めます。PDF版も用意しています。</div></details>
   <details class="faq-item"><summary>理論絵本とは、何ですか？</summary><div class="faq-a">火水性質分析の基本編を、大きな絵と短い文の絵本に組み直したものです。内容は、無料で公開している「中心の記事」と同じで、ちがうのは形です。全43ページです。物語を読んだあとに「なぜ、そうなるの？」をくわしく知りたい方におすすめです。</div></details>
   <details class="faq-item"><summary>子ども向けの絵本ですか？</summary><div class="faq-a">絵本の形をしていますが、内容は大人に向けたものです。パートナーとのすれ違いや、自分の性質を知りたい大人の方が、物語を通して火水の考え方に触れられるように作りました。</div></details>
   <details class="faq-item"><summary>手元に置く版は、ありますか？</summary><div class="faq-a">印刷できるPDF版に、夫婦で書き込むワークシート（お互いの性質・最高交差点）と追加のメモページを付けた「手元に置く版」を準備中です。ご案内ができるようになったら、このページに載せます。価格は未定です。</div></details>
   <details class="faq-item"><summary>作者は、誰ですか？</summary><div class="faq-a">心体調整塾の、たけちゃんです。真逆の性質の夫婦が、結婚15年かけて実践・研究してきた「火水性質分析」をもとに作りました。</div></details>
-  </section>
+    </div>
+  </details>
+</section>
 <footer>心体調整塾 たけちゃん</footer>
 </div>
 
